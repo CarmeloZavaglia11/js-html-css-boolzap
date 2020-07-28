@@ -5,14 +5,17 @@
     font-family: 'Mulish', sans-serif;
 }
 
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 /* ---MACROSEZIONI--- */
 
 .screen {
-    background: rgb(76,237,105);
-    background: -moz-linear-gradient(180deg, rgba(76,237,105,1) 20%, rgba(214,210,210,1) 20%);
-    background: -webkit-linear-gradient(180deg, rgba(76,237,105,1) 20%, rgba(214,210,210,1) 20%);
-    background: linear-gradient(180deg, rgba(76,237,105,1) 20%, rgba(214,210,210,1) 20%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4ced69",endColorstr="#d6d2d2",GradientType=1);  
+    background-image: url('https://i.imgur.com/2nmRpTa.jpg');
+    background-size: contain;
     width: 100vw;
     height: 100vh; 
     display: flex;
@@ -38,9 +41,19 @@ aside {
 section {
     width: 70%;
     height: 100%;
-    background-image: url('https://fsb.zobj.net/crop.php?r=a0uD2sHFQucHt9mFajx0P7Mxp-e3yfz5ROUg-JKHMP9i7PrdiiOQV0jxU8ogGP6g37LrpT7Zh2EvQs7nD-x07coKNQPLa1XJ1hZ0TOft0W2SsKaOfurzWG-dLNgb-OtySvzjf3ut2wS7GkEJ');
-    background-size: contain;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.setaswall.com%2Fwp-content%2Fuploads%2F2019%2F08%2FWhatsapp-Wallpaper-111.jpg&f=1&nofb=1');
+    background-size: cover;
+    background-position: center;
 }
+
+i:hover {
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+
 
 /* START CSS */
 
@@ -81,10 +94,6 @@ section {
 .aside-top-buttons ul li i {
     font-size: 20px;
     cursor: pointer;
-}
-
-.aside-top-buttons ul li i:hover {
-    color: rgba(0,0,0,0.5);
 }
 
 .notifications {
@@ -163,8 +172,8 @@ section {
 }
 
 .contact .img-contact {
-    width: 90px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
     margin-left: 10px;
 }
 
@@ -186,4 +195,143 @@ section {
     height: 85px;
     text-align: center;
     line-height: 40px;
+}
+
+.messaging-info {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgrey;
+    border-left: 1px solid rgb(189, 188, 188);
+}
+
+.left-mess-info {
+    width: 40%;
+    height: 85px;
+    display: flex
+}
+
+.contacted-img {
+    width: 85px;
+    height: 85px;
+    padding: 10px;
+}
+
+.contacted-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contacted-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.right-mess-info {
+    width: 20%;
+    height: 85px;
+}
+
+.right-mess-info ul {
+    list-style: none;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right-mess-info ul li {
+    display: inline-block;
+}
+
+.right-mess-info ul li i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.messages-table {
+    height: calc(100% - 180px);
+    padding: 25px;
+}
+
+.received {
+    float: left;
+    clear: both;
+}
+
+.sended {
+    float: right;
+    clear: both;
+}
+
+.message-received {
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.message-sended {
+    background-color: lightgreen;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.message-received span,
+.message-sended span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 10px;
+    color: grey;
+    padding: 5px;
+}
+
+.messages-texting {
+    height: 90px;
+    display: flex;
+    background-color: lightgrey;
+}
+
+.messages-texting i {
+    font-size: 30px;
+}
+
+.icons,
+.texting,
+.send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    width: 10%;
+    height: 100%;
+}
+
+.texting {
+    width: 90%;
+    height: 100%;
+}
+
+.texting input {
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.send {
+    width: 10%;
+    height: 100%;
 }
