@@ -25,6 +25,7 @@
 
 .container {
     width: 80%;
+    min-width: 800px;
     height: 90vh;
     background-color: #fff;
     display: flex;
@@ -257,6 +258,7 @@ i:hover {
 .messages-table {
     height: calc(100% - 180px);
     padding: 25px;
+    overflow-y: scroll;
 }
 
 .received {
