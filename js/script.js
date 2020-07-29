@@ -39,7 +39,14 @@ $(document).keydown(function(e){
 
 function messages() {
 
+    var dt = new Date();
+    var time = dt.getHours() + ":" + dt.getMinutes();
+
     var textInput = $('#testo').val();
+
+    if (textInput.val('')) {
+        return;
+    }
 
     var messaggio = $('.cloning .message').clone().text(textInput).addClass('sent').append('<span>' + time + '<span/>');
 
@@ -71,10 +78,10 @@ function messages() {
                 break;
             case "vaffanculo":
                 risposta.text(risp[5]);
+                break;
             case "tutto bene":
                 risposta.text(risp[6]);
                 break;
-        
             default:
                 risposta.text(risp[1]);
                 break;
