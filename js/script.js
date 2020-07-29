@@ -44,7 +44,7 @@ function messages() {
 
     var textInput = $('#testo').val();
 
-    if (textInput.val('')) {
+    if (textInput == '') {
         return;
     }
 
