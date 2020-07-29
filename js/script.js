@@ -8,7 +8,8 @@ var risp = [
     "mi chiamo Francesco, il bot piu' fresco",
     "fa molto caldo oggi, ci sono quasi 40 gradi!!",
     "tutto bene , tu?",
-    "non voglio fare il maleducato,chiedimi altro"
+    "non voglio fare il maleducato,chiedimi altro",
+    "menomale :)"
 ]
 
 // Invio messaggi
@@ -17,13 +18,11 @@ $('.send-button').click(messages);
 
 $(document).keydown(function(e){
 
-    if (e.which == 13 || e.code == Enter) {
+    if (e.which == 13 || e.code == 13) {
         messages()
     }
 
 });
-
-
 
 // FUNZIONI //
 
@@ -57,6 +56,9 @@ function messages() {
             case "vaffanculo":
                 risposta.text(risp[5]);
                 break;
+            case "tutto bene":
+                risposta.text(risp[6]);
+                break;
         
             default:
                 risposta.text(risp[1])
@@ -72,6 +74,7 @@ function numeroRandom(min,max) {
     numero = Math.floor(Math.random()* (max - min + 1) ) + min;
     return numero;
 }
-
 });
+
+
 
