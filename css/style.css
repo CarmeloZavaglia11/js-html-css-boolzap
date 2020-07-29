@@ -279,6 +279,11 @@ i:hover {
     padding: 20px;
     margin: 5px;
     position: relative;
+    cursor: pointer;
+}
+
+.message:hover {
+    box-shadow: 0 0 14px #000;
 }
 
 .message span {
