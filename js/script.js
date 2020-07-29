@@ -29,13 +29,20 @@ $(document).keydown(function(e){
 
 
 function messages() {
+
     var textInput = $('#testo').val();
 
-    var clone = $('.cloning .message').clone().text(textInput).addClass('sent');
+    var messaggio = $('.cloning .message').clone().text(textInput).addClass('sent');
 
     var risposta = $('.cloning .message').clone().addClass('received');
 
-    $('.messages-table').append(clone);
+    
+
+    $('.messages-table').append(messaggio);
+
+    $('#testo').val('');
+
+    
 
     setTimeout(function(){
 
