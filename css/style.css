@@ -25,7 +25,7 @@
 
 .container {
     width: 80%;
-    min-width: 800px;
+    min-width: 1000px;
     height: 90vh;
     background-color: #fff;
     display: flex;
@@ -264,31 +264,25 @@ i:hover {
 .received {
     float: left;
     clear: both;
+    background-color: #fff;
 }
 
-.sended {
+.sent {
     float: right;
     clear: both;
+    background-color: #dcf8c6;
 }
 
-.message-received {
-    background-color: #fff;
+.message {
+    max-width: 50%;
     color: black;
     border-radius: 10px;
     padding: 20px;
+    margin: 5px;
     position: relative;
 }
 
-.message-sended {
-    background-color: lightgreen;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-}
-
-.message-received span,
-.message-sended span {
+.message span {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -309,7 +303,7 @@ i:hover {
 
 .icons,
 .texting,
-.send {
+.send-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -333,7 +327,11 @@ i:hover {
     font-size: 20px;
 }
 
-.send {
+.send-button {
     width: 10%;
     height: 100%;
+}
+
+.cloning {
+    display: none;
 }
