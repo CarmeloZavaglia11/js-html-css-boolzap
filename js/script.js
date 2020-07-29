@@ -1,3 +1,7 @@
+$(document).ready(function(){
+
+    // Risposte Bot
+
 var risp = [
     "ciao! sono pronto chiedimi qualcosa!",
     "non ho ben capito cosa hai detto",
@@ -6,6 +10,8 @@ var risp = [
     "tutto bene , tu?",
     "non voglio fare il maleducato,chiedimi altro"
 ]
+
+// Invio messaggi
 
 $('.send-button').click(messages);
 
@@ -16,6 +22,12 @@ $(document).keydown(function(e){
     }
 
 });
+
+
+
+// FUNZIONI //
+
+
 
 function messages() {
     var textInput = $('#testo').val();
@@ -60,3 +72,6 @@ function numeroRandom(min,max) {
     numero = Math.floor(Math.random()* (max - min + 1) ) + min;
     return numero;
 }
+
+});
+
