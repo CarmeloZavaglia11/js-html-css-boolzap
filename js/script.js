@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
-    // Risposte Bot
+    
+
+// TIME 
+
+var dt = new Date();
+var time = dt.getHours() + ":" + dt.getMinutes();
+
+$('.contacted-info').append('<p> Ultimo accesso oggi alle ' +  time + '</p>')
+
+// Risposte Bot
 
 var risp = [
     "ciao! sono pronto chiedimi qualcosa!",
@@ -29,9 +38,6 @@ $(document).keydown(function(e){
 
 
 function messages() {
-
-    var dt = new Date();
-    var time = dt.getHours() + ":" + dt.getMinutes();
 
     var textInput = $('#testo').val();
 
