@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
-    
-
-// TIME 
+// TIME
 
 var dt = new Date();
 var time = dt.getHours() + ":" + dt.getMinutes();
@@ -35,6 +33,30 @@ $(document).keydown(function(e){
 
 });
 
+// Match conversazione con utente
+
+$('.contact').click(function(){
+
+    var contactIndex = $(this).index();
+
+    $('.contact').removeClass('active');
+    $('.messages-table').removeClass('active');
+
+    selectedChat = $('.messages-table').eq(contactIndex);
+    selectedChat.addClass('active');
+    $(this).addClass('active');
+
+    
+    var img = $('.contact.active').find('img').attr('src');
+    var tit = $('.contact.active').find('h3').text();
+    console.log(img);
+    $('.contacted-img > img').attr('src',img);
+    $('.contacted-info > h3').text(tit);
+
+});
+
+
+
 // FUNZIONI //
 
 
@@ -55,13 +77,13 @@ function messages() {
 
     var risposta = $('.cloning .message').clone().addClass('received');
 
-    
+
 
     $('.messages-table.active').append(messaggio);
 
     $('#testo').val('');
 
-    
+
 
     setTimeout(function(){
 
@@ -91,7 +113,7 @@ function messages() {
         }
 
         risposta.append('<span>' + time + '</span>');
-        
+
         $('.messages-table.active').append(risposta);
 
     },1000);
@@ -102,11 +124,8 @@ function numeroRandom(min,max) {
     return numero;
 }
 
-function minutes_with_leading_zeros(dt) { 
+function minutes_with_leading_zeros(dt) {
   return (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
 }
 
 });
-
-
-
