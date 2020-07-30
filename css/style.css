@@ -169,6 +169,8 @@ i:hover {
 .contact:hover {
     background-color: lightgrey;
     cursor: pointer;
+    transform: scale(0.9);
+    border-radius: 10px;
 }
 
 .contact .img-contact {
@@ -258,6 +260,7 @@ i:hover {
     height: calc(100% - 180px);
     padding: 25px;
     overflow-y: scroll;
+    display: none;
 }
 
 .received {
@@ -338,4 +341,12 @@ i:hover {
 
 .cloning {
     display: none;
+}
+
+.messages-table.active {
+    display: block;
+}
+
+.contact.active {
+    background-color: lightgrey;
 }

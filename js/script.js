@@ -41,7 +41,7 @@ function messages() {
 
     var dt = new Date();
 
-    var time = dt.getHours() + ":" + minutes_with_leading_zeros(dt)
+    var time = dt.getHours() + ":" + minutes_with_leading_zeros(dt);
 
     var textInput = $('#testo').val();
 
@@ -55,7 +55,7 @@ function messages() {
 
     
 
-    $('.messages-table').append(messaggio);
+    $('.messages-table.active').append(messaggio);
 
     $('#testo').val('');
 
@@ -88,9 +88,9 @@ function messages() {
                 break;
         }
 
-        risposta.append('<span>' + time + '</span>')
+        risposta.append('<span>' + time + '</span>');
         
-        $('.messages-table').append(risposta);
+        $('.messages-table.active').append(risposta);
 
     },1000);
 }
