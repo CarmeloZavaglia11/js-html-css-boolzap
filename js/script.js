@@ -27,7 +27,7 @@ $('.send-button').click(messages);
 
 $(document).keydown(function(e){
 
-    if (e.which == 13 || e.code == 13) {
+    if (e.which == 13 || e.keyCode == 13) {
         messages()
     }
 
@@ -40,7 +40,8 @@ $(document).keydown(function(e){
 function messages() {
 
     var dt = new Date();
-    var time = dt.getHours() + ":" + dt.getMinutes();
+
+    var time = dt.getHours() + ":" + minutes_with_leading_zeros(dt)
 
     var textInput = $('#testo').val();
 
@@ -98,6 +99,11 @@ function numeroRandom(min,max) {
     numero = Math.floor(Math.random()* (max - min + 1) ) + min;
     return numero;
 }
+
+function minutes_with_leading_zeros(dt) { 
+  return (dt.getMinutes() < 10 ? '0' : '') + dt.getMinutes();
+}
+
 });
 
 
