@@ -164,12 +164,13 @@ i:hover {
     height: 90px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid lightgrey;
 }
 
 .contact:hover {
     background-color: lightgrey;
     cursor: pointer;
-    transform: scale(0.9);
+    transform: scale(0.98);
     border-radius: 10px;
 }
 
@@ -348,5 +349,5 @@ i:hover {
 }
 
 .contact.active {
-    background-color: lightgrey;
+    background-color: #e5e2e2;
 }

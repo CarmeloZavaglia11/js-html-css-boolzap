@@ -7,7 +7,9 @@ $(document).ready(function(){
 var dt = new Date();
 var time = dt.getHours() + ":" + dt.getMinutes();
 
-$('.contacted-info').append('<p> Ultimo accesso oggi alle ' +  time + '</p>')
+$('.contacted-info').append('<p> Ultimo accesso oggi alle ' +  time + '</p>');
+
+$('.time').text(time);
 
 // Risposte Bot
 
