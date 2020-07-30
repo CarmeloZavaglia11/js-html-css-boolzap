@@ -3,7 +3,7 @@ $(document).ready(function(){
 // TIME
 
 var dt = new Date();
-var time = dt.getHours() + ":" + dt.getMinutes();
+var time = dt.getHours() + ":" + minutes_with_leading_zeros(dt);
 
 $('.contacted-info').append('<p> Ultimo accesso oggi alle ' +  time + '</p>');
 
@@ -46,7 +46,7 @@ $('.contact').click(function(){
     selectedChat.addClass('active');
     $(this).addClass('active');
 
-    
+
     var img = $('.contact.active').find('img').attr('src');
     var tit = $('.contact.active').find('h3').text();
     console.log(img);
