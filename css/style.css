@@ -25,7 +25,7 @@
 
 .container {
     width: 80%;
-    min-width: 1000px;
+    min-width: 1050px;
     height: 90vh;
     background-color: #fff;
     display: flex;
@@ -284,6 +284,7 @@ i:hover {
     margin: 5px;
     position: relative;
     cursor: pointer;
+    word-wrap: break-word;
 }
 
 .message:hover {

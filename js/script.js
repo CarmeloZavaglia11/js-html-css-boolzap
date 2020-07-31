@@ -49,10 +49,26 @@ $('.contact').click(function(){
 
     var img = $('.contact.active').find('img').attr('src');
     var tit = $('.contact.active').find('h3').text();
-    console.log(img);
+
     $('.contacted-img > img').attr('src',img);
     $('.contacted-info > h3').text(tit);
 
+});
+
+// Searching
+
+$('#searching').keyup(function () { 
+    var input = $('#searching').val().toLowerCase();
+    var contacts = $('.contact');
+
+    contacts.each(function(){
+        
+        if ($(this).find('.contact-name').text().toLowerCase().includes(input)) {
+            $(this).show();
+        }  else {
+            $(this).hide();
+        }
+    });
 });
 
 
