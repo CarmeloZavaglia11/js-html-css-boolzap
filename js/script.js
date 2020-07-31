@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+// Settaggio input a ''
+
+    $('input').val('');
+
 // TIME
 
 var dt = new Date();
@@ -70,7 +74,6 @@ $('#searching').keyup(function () {
         }
     });
 });
-
 
 
 // FUNZIONI //
